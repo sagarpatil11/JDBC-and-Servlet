@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration</title>
+<style type="text/css">
+form {
+	background-color: #b0fff7;
+	margin: 100px 400px 100px 400px;
+	padding: 0px 0px 0px 20px;
+}
+
+table, th, td {
+	border: 1px solod black;
+}
+
+table input[type="submit"] {
+	display: block;
+	margin: 0 auto;
+}
+
+h1 {
+	align: center;
+}
+</style>
+<script type="text/javascript">
+	function func() {
+		var regexlname = /^[a-zA-Z]{3,20}$/;
+		var lastname = documentElementById("lname").value;
+		var regexfname = /^[a-zA-Z]{3,30}$/;
+		var firstname = document.getElementById("fname").value;
+		var regexmob = /^[0-9]{10}$/;
+		var mobno = document.getElementById("mobno").value;
+		if (!regexfname.test(firstname)) {
+			alert("Enter only characters");
+			return false;
+		}
+		if (!regexlname.test(lastname)) {
+			alert("Enter only characters");
+			return false;
+		}
+		if (!regexmob.test(mobno)) {
+			alert("mobile number contain 10 digits ");
+			return false;
+		} else {
+
+			return true;
+		}
+	}
+</script>
+</head>
+<body>
+
+	<form action="register" method="post" onsubmit="return func();">
+		<center>
+			<h1>Registration</h1>
+		</center>
+		<table>
+			<tr>
+				<td>Email</td>
+				<td><input type="email" name="email" required="required"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			
+			<tr>
+				<td>First Name</td>
+				<td><input type="text" name="firstname" 
+					id="fname"></td>
+			</tr>
+			<tr>
+				<td>Last Name</td>
+				<td><input type="text" name="lastname" required="required"
+					id="lname"></td>
+			</tr>
+			<tr>
+				<td>Mobile Number</td>
+				<td><input type="text" name="mobile"
+					id="mobno"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Register"></td>
+				<td><input type="reset" value="reset"></td>
+			</tr>
+		</table>
+	</form>
+
+
+</body>
+</html>
+
+
+
