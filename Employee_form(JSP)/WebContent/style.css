@@ -1,0 +1,79 @@
+@CHARSET "UTF-8";
+
+/*css for header  */
+.header_ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #2e94c3 ;
+	position:fixed;
+    top:0;
+    width:100%;
+}
+
+.header_li {
+    float: left;
+    color:white
+    
+}
+
+li.header_li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+
+/* css for emp details */
+ul.ul2 {
+    list-style-type: none;
+    margin:100px;
+    margin-left:0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    border: 1px solid #555;
+}
+
+.li1{
+	background-color: #35a0d2;
+	display: block;
+	text-align: center;
+	padding:20px 16px;
+	border-bottom: 1px solid #555;
+}
+.li2{
+	background-color: #7cd2fa;
+	display: block;
+	padding:20px 16px;
+color: black;
+border-bottom: 1px solid #555;
+ text-align: center;
+}
+
+/* css for table */
+.table1{
+	margin-top:50px;
+	margin-left: 10px;
+	margin-right: 20px;
+	border:2 solid black;
+	
+}
+th,td{
+	padding: 10px;
+	
+}
+
+.row1{
+	background-color:   #35a0d2 ;
+}
+
+.row2{
+	background-color:   #7cd2fa; 
+}
+
+body{
+	background-color:   #cdecfb  ;
+}
