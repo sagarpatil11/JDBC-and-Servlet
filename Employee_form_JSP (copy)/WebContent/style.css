@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #2e94c3 ;
+	position:fixed;
+    top:0;
+    width:100%;
+}
+
+li {
+    float: left;
+    color:white
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+
+.table1{
+	margin-top:100px;
+	margin-left: 120px;
+	border:2 solid black;
+	
+}
+th,td{
+	padding: 10px;
+	
+}
+
+.row1{
+	background-color:   #35a0d2 ;
+}
+
+.row2{
+	background-color:   #7cd2fa; 
+}
+
+body{
+	background-color:   #cdecfb  ;
+}
