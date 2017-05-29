@@ -1,0 +1,87 @@
+@CHARSET "UTF-8";
+/*css for header  */
+.header_ul{
+    list-style-type: none;
+    
+    overflow: hidden;
+    background-color:  #2e94c3 ;
+	position:fixed;
+    top:0;
+    width:100%;
+}
+
+.header_li {
+    float: left;
+    color:white
+    
+}
+.navbar{
+	background-color:  #2e94c3 ;
+}
+
+.nav{
+	padding-top: 15px;
+}
+
+li.header_li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 27px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* css for emp details */
+.ul2 {
+    list-style-type: none;
+    margin-top:100px;
+    margin-left:500px;
+    margin-right:450px;
+    padding: 0;
+    width: 300px;
+    background-color: #f1f1f1;
+    border: 1px solid #555;
+}
+
+.li1{
+	background-color: #35a0d2;
+	display: block;
+	text-align: center;
+	padding:20px 16px;
+	border-bottom: 1px solid #555;
+}
+.li2{
+	background-color: #7cd2fa;
+	display: block;
+	padding:20px 16px;
+color: black;
+border-bottom: 1px solid #555;
+ text-align: center;
+}
+
+/* css for table */
+.table1{
+	margin-top:50px;
+	margin-left: 10px;
+	margin-right: 20px;
+	border:2 solid black;
+	
+}
+th,td{
+	padding: 10px;
+	
+}
+
+.row1{
+	background-color:   #35a0d2 ;
+}
+
+.row2{
+	background-color:   #7cd2fa; 
+}
+
+body{
+		background-color:  #cdecfb ;
+		margin-top: 130px;
+	}
