@@ -32,27 +32,37 @@ javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,jav
 
 <link rel="stylesheet" href="style.css" type="text/css">
 	
-	 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/redmond/jquery-ui.css" rel="stylesheet" type="text/css"/> 
+	<!--  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/redmond/jquery-ui.css" rel="stylesheet" type="text/css"/> 
 	
-	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> -->
 	
 	 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" 
 			integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
 			crossorigin="anonymous">
 
-	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
 			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
 			crossorigin="anonymous"></script> 
  
-	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	 -->
+	 
+	  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+	 
+	 
 	<!-- /* emp_details(eid,ename,email,add,cname,age,gender,specialized,lang,sal)
 	{
 		/* var divtag="<div><table><tr><td>Employee ID</td></tr></table></div>"; */
 		
 		/* $("<div><table><tr><td>Employee ID</td></tr></table></div>").dialog({modal: true, height: 590, width: 1005 }); */
 //	}  -->
-	<script>
+	<script type="text/javascript">
 	 $(document).ready(function () 
 	{
 		$(".li2").click(function () 
@@ -78,19 +88,19 @@ javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,jav
 			$("<div class='container' id='popup'><div class='row'><div class='col-lg-4 col-md-3 col-sm-2'></div><div class='col-lg-4 col-md-6 col-sm-8'><div title='Employee Details'><form><table class='table' ><tr class='row1'><td>Employee ID</td><td>Employee Name</td><td>Employee Email</td><td>Address</td><td>Company Name</td><td>Age</td><td>Gender</td><td>Specialized</td><td>languages</td><td>Salary</td></tr><tr class='row2'><td>"+eid+"</td><td>"+enm+"</td><td>"+email+"</td><td>"+add+"</td><td>"+cnm+"</td><td>"+age+"</td><td>"+gender+"</td><td>"+special+"</td><td>"+lang+"</td><td>"+sal+"</td></tr></table><br><div class='form-group'><button name='eid' value='"+eid+"' formaction='Employee_Update' formmethod='post' class='btn btn-primary'>Update</button><button name='eid' value='"+eid+"' formaction='Emp_Delete' formmethod='post' class='btn btn-danger'>Delete</button></div></form></div></div><div class='col-lg-4 col-md-3 col-sm-2'></div></div></div>")
 				.dialog({modal: true, height: 300, width: 1050 });  */
 			
-				$("#eid").val($(this).attr("id"));
-				$("#ename").val($(this).attr("empname"));
-				$("#email").val($(this).attr("empemail"));
-				$("#address").val($(this).attr("address"));
-				$("#company").val($(this).attr("cname"));
-				$("#age").val($(this).attr("age"));
-				$("#gender").val($(this).attr("gender"));
-				$("#specialized").val($(this).attr("special"));
-				$("#language").val($(this).attr("lang"));
-				$("#salary").val($(this).attr("sal"));
+				$('#eid').val($(this).attr("id"));
+				$('#ename').val($(this).attr("empname"));
+				$('#email').val($(this).attr("empemail"));
+				$('#address').val($(this).attr("address"));
+				$('#company').val($(this).attr("cname"));
+				$('#age').val($(this).attr("age"));
+				$('#gender').val($(this).attr("gender"));
+				$('#specialized').val($(this).attr("special"));
+				$('#language').val($(this).attr("lang"));
+				$('#salary').val($(this).attr("sal"));
 				
-				 $("#myModal").modal();
-		})
+				 $('#myModal').modal({backdrop:true});
+		});
 	}); 
 	
 	
@@ -140,6 +150,13 @@ javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,jav
 		background-color:  #cdecfb ;
 		margin-top: 130px;
 	}
+	
+	.modal-title {
+    margin: 0;
+    line-height: 1.42857143;
+    color: #eaeff3;
+}
+	
 	</style>
 	
 
@@ -208,15 +225,17 @@ javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,jav
     
       	<!-- Modal content-->
    		   		<div class="modal-content">
-        			<div class="modal-header">
+        			<div class="modal-header" style="background-color: #2e94c3">
           				<button type="button" class="close" data-dismiss="modal">&times;</button>
           				<h4 class="modal-title">Employee Details</h4>
         			</div>
-        			<div class="modal-body">
-          					<table>
+        			<form action="Employee_Update" method="post">
+        			<div class="modal-body" style="background-color: #cdecfb">
+        				
+          					<table class="table">
           						<tr>
           							<th>Employeee Id</th>
-          							<td><input type="text" id="eid" readonly="readonly"></td>
+          							<td><input type="text" id="eid" name="eid" readonly="readonly"></td>
           						</tr>
           						<tr>
           							<th>Employee Name</th>
@@ -257,13 +276,15 @@ javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,jav
           					
           					</table>
         			</div>
-        			<div class="modal-footer">
-        				<form action="Employee_Update" method="post">
-        					<input type="hidden" id="eid" readonly="readonly">
-          					<button class="btn btn-default" data-dismiss="modal">Close</button>
-          					<input type="submit" class='btn btn-primary' value="Update">
-          				</form>	
+        			
+        			<div class="modal-footer" style="background-color: #cdecfb">
+        				
+        					<input type="hidden" id="eid" name="eid" readonly="readonly">
+          					<input type="submit" class='btn btn-success' value="Update">
+          					<button class="btn btn-danger" formaction="Emp_Delete">Delete</button>
+          					<button class="btn btn-primary" data-dismiss="modal">Close</button>
        		 		</div>
+       		 		</form>	
       			</div>
       
     		</div>

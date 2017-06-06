@@ -32,7 +32,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Update Employee</title>
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" 
+<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" 
 integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
 crossorigin="anonymous">
 
@@ -41,7 +41,17 @@ integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7T
 crossorigin="anonymous"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ -->
+ 
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+ 
 <script >
 function validate()
 {
@@ -103,9 +113,7 @@ function validate()
   	width: 450px;
 	margin-top: 100px;
 }
-.navbar-toggle:hover {
-    background-color: #a3e6ece6;
-}
+
 .navbar-toggle {
 	padding: 10px 10px;
 	margin-top: 19px;
@@ -114,6 +122,15 @@ function validate()
 	.navbar-inverse .navbar-nav > li > a {
     color: #eaeff3;
 }
+
+.navbar-inverse .navbar-toggle {
+    border-color: #eaeff3;
+}
+
+.navbar-inverse  .navbar-toggle:hover {
+    background-color: #d9edf7;
+}
+
 a{
 	color:#eaeff3;
 }
@@ -163,6 +180,7 @@ input[type=checkbox],input[type=radio]{
     		 <div class="collapse navbar-collapse" id="myNavbar"> 
       			<ul class="nav navbar-nav">
        				<li><a href="EmployeeDetails">Employee Details</a></li>
+       				<li><a class="nav_a" href="Employee_Registration">Employee Registration</a></li>
       			</ul>
      			 <ul class="nav navbar-nav navbar-right">
        
@@ -181,7 +199,7 @@ input[type=checkbox],input[type=radio]{
  -->	
  	<div class="container">
 		<form action="Update_Emp" class="form2" method="post" onsubmit="return validate()">
-		<div class="table-responsive">
+		<div>
 			<table>
 				<tr>
 					<center><h2>Update Employee</h2></center>

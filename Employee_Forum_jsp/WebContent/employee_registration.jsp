@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Employee Registration</title>
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" 
+<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" 
 integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
 crossorigin="anonymous">
 
@@ -15,7 +16,18 @@ integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7T
 crossorigin="anonymous"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ -->
+ 
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+ 
+ 
 <script >
 function validate()
 {
@@ -33,7 +45,7 @@ function validate()
 	var number_regex=/^[0-9]\d*$/;
 	var salary=document.getElementById("salary").value;
 	
-	var specialized[]=document.getElementById("specialized").value;
+	/* var specialized[]=document.getElementById("specialized").value; */
 	
 	if(!email.match(email_regex))
 	{
@@ -131,28 +143,29 @@ input[type=checkbox],input[type=radio]{
 </head>
 <body>
 
-	<nav class="navbar navbar-fixed-top navbar-inverse">
+	<body>
+	<nav class="navbar  navbar-fixed-top navbar-inverse">
 	  	<div class="container-fluid">
     		<div class="navbar-header">
       			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>                    
-      			</button>
+        			<span class="icon-bar"></span>   
+        			<span class="icon-bar"></span>                 
+      			</button> 
       			<h1>Employee Forum</h1>
     		</div>
-   		 	<div class="collapse navbar-collapse" id="myNavbar">
+    		 <div class="collapse navbar-collapse" id="myNavbar"> 
       			<ul class="nav navbar-nav">
-      				 <li><a href="EmployeeDetails">Employee Details</a></li>
-     		 	</ul>
-      			<ul class="nav navbar-nav navbar-right">
+       				<li><a href="EmployeeDetails">Employee Details</a></li>
+      			</ul>
+     			 <ul class="nav navbar-nav navbar-right">
        
-        			<li><a href="Logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-     			 </ul>
-    		</div>
- 		 </div>
+       				 <li><a href="Logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      			</ul>
+   			  </div> 
+  		</div>
 	</nav>
-
+	
 	<!-- <nav class="navbar navbar-default">
   		<div class="container-fluid">
 			<ul class='header_ul'>
@@ -166,8 +179,8 @@ input[type=checkbox],input[type=radio]{
   </nav> -->
 	<div class="container">
 		<form action="EmployeeRegistration" method="post" onsubmit="return validate())">
-			<div class="table-responsive">
-				<table>
+			<div class="table-resposive">
+				<table >
 					<tr>
 						<center><h2>Employee Registration</h2></center>
 					</tr>
